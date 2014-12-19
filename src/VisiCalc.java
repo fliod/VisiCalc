@@ -23,6 +23,9 @@ public class VisiCalc{
    cells[10]=new CellDate("01/01/1990");
    cells[11]=new CellDate("12/25/2014");
   // print the array
-   System.out.print(cells.toString());
+   for(int i=0;i<cells.length;i++)
+   {
+     System.out.print(cells[i]+", ");
+   }
  }
 }
