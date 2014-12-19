@@ -8,9 +8,9 @@ public class CellDate extends Cell {
   {
     super();
   }
-  public CellDate(DateFormat in)
+  public CellDate(String in)
   {
-    super(in.toString());
+    super.setValue(in);
   }
   
   public void setValue(String input) 
