@@ -40,14 +40,15 @@ public class Spreadsheet {
   // constructor
   public Spreadsheet() {
     //TODO
-    String border="";
-    String borderRow=border+"+";
+    border="";
+    borderRow=border+"";
     cells=new Cell[rows][columns];
     cells[0][0] = new CellString("");
     for(int i=0;i<columnWidth;i++)
     {
       border+="-";
     }
+    borderRow=border+"+";
     for(int col=1;col<columns;col++)
     {
       cells[0][col]=new CellString((char)(asciiOffset+col)+"");
@@ -77,16 +78,7 @@ public class Spreadsheet {
   
   public void print() {
     // TODO    
-    String borderRow="";
-    for(int i=0;i<columns;i++)
-    {
-      for(int x=0;x<columnWidth;x++)
-      {
-        borderRow+="-";
-      }
-      borderRow+="+";
-    }
-    for (int row=0; row< rows; row++)
+    for (int row=0; row<rows; row++)
     {
       for(int col=0; col<columns; col++)
       {
