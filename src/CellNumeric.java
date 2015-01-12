@@ -1,22 +1,30 @@
-// placeholder
-public class CellNumeric extends Cell
-{
-  public CellNumeric()
-  {
-    super.setValue("");
+public class CellNumeric extends Cell {
+  
+  public CellNumeric() {
+    super("");
   }
-  public CellNumeric(double in)
-  {
-    String out=Double.toString(in);
-    super.setValue(out);
+  
+  public CellNumeric(String input) {
+    super(input);
   }
-  public double value()
-  {
-    return Double.parseDouble(super.getValue());
+  
+  public String getInputValue() {
+    String inputString = getInputString();
+    try {
+      Double.parseDouble(inputString);
+    } catch (Exception e) {
+      return "<empty>";
+    }
+    return inputString;
   }
-  public void setValue(double in)
-  {
-    super.setValue(Double.toString(in));
+  
+  public String getDisplayString() {
+    String inputString = getInputString();
+    try {
+      Double.parseDouble(inputString);
+    } catch (Exception e) {
+      return "";
+    }
+    return inputString;
   }
 }
-  
