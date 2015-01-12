@@ -77,7 +77,15 @@ public class Spreadsheet {
   
   public void print() {
     // TODO    
-    String borderRow="------------+------------+------------+------------+------------+------------+------------+------------+";
+    String borderRow="";
+    for(int i=0;i<columns;i++)
+    {
+      for(int x=0;x<columnWidth;x++)
+      {
+        borderRow+="-";
+      }
+      borderRow+="+";
+    }
     for (int row=0; row< rows; row++)
     {
       for(int col=0; col<columns; col++)
